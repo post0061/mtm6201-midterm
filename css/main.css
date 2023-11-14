@@ -1,0 +1,420 @@
+/* CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end of CSS Reset */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #3a243b;
+  --secondary-color: #51b848;
+  --tertiary-color: #fff7e2;
+  --quaternary-color: white;
+  --primary-font: "Great Vibes", cursive;
+  --secondary-font: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--fourth-color);
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--primary-font);
+}
+
+table tr {
+  font-family: var(--secondary-font);
+}
+
+footer button {
+  background-color: var(--secondary-color);
+}
+
+/* Desktop */
+
+/* skip link */
+.skip-link {
+  position: absolute;
+  top: -40px; /* Move off-screen */
+  left: 0;
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header styling */
+.header-search {
+  display: flex;
+  padding: 30px 50px 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+
+/* add a heartbeat animation for the logo */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logo-img {
+  width: 120px;
+  animation: heartbeat;
+  animation-duration: 1s;
+  /* make the animation loop */
+  animation-iteration-count: infinite;
+}
+
+.slogan {
+  & h1 {
+    font-size: 50px;
+    font-weight: 400;
+  }
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+
+  & input {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
+  & button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    & span {
+      font-size: 18px;
+    }
+  }
+}
+
+/* navigation styling */
+.nav-wrapper nav ul {
+  display: flex;
+  padding: 15px;
+  margin: 0;
+  background: var(--primary-color);
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  list-style: none;
+
+  & li a {
+    font-family: var(--secondary-font);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--tertiary-color);
+    text-decoration: none;
+    transition: 0.2s ease;
+    transition-property: color;
+
+    /* change color of nav item on hover */
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+
+  /* change color of currently selected element */
+  & .active {
+    color: var(--secondary-color);
+  }
+}
+
+/* Main styling */
+.banner-image {
+  height: calc(100vh - 200px);
+  position: relative;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* positioning and alignment of slogan on banner image */
+  & .banner-slogan {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+
+    & h3 {
+      font-family: var(--primary-font);
+      color: var(--tertiary-color);
+      font-size: 50px;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+}
+
+.our-specials-divider {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  background: var(--tertiary-color);
+
+  & h2 {
+    color: var(--primary-color);
+    font-size: 50px;
+    font-weight: 400;
+    padding: 10px 0;
+    margin: 0;
+  }
+}
+
+/* styling of grid items */
+.specials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px 90px;
+  column-gap: 30px;
+
+  & .grid-item {
+    height: 600px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    transition-property: transform;
+
+    /* transform animation applied on hover */
+    &:hover {
+      transform: scale(0.9) rotate(5deg);
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    & .product-title {
+      margin: 0;
+      font-family: var(--primary-font);
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
+
+/* Footer styling */
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  margin-top: 50px;
+  padding: 30px 50px 20px;
+
+  & .logo-img {
+    width: 180px;
+  }
+
+  & .business-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+
+    & > * {
+      font-family: var(--secondary-font);
+      color: var(--secondary-color);
+    }
+
+    & h3 {
+      margin: 0;
+      font-size: 25px;
+    }
+
+    & table > * {
+      font-size: 20px;
+    }
+  }
+
+  & .social-icons ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 10px;
+
+    & li a img {
+      width: 40px;
+    }
+  }
+
+  & .newsletter-subscription {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-basis: 30%;
+
+    & span {
+      color: var(--secondary-color);
+      font-size: 45px;
+    }
+
+    & input {
+      width: 100%;
+      border: 1px solid black;
+      padding: 12px;
+      font-size: 15px;
+      color: var(--primary-color);
+    }
+
+    & button {
+      border: 1px solid var(--secondary-color);
+      padding: 10px;
+      color: var(--secondary-color);
+      background: transparent;
+      font-family: var(--secondary-font);
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Mobile styling */
+@media only screen and (max-width: 600px) {
+  /* Header styling */
+  .header-search {
+    flex-direction: column;
+    height: 100%;
+    padding: 30px;
+
+    .slogan {
+      & h1 {
+        font-size: 30px;
+      }
+    }
+
+    .search-bar {
+      width: 100%;
+
+      & input {
+        width: 100%;
+      }
+    }
+  }
+
+  .nav-wrapper nav ul {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    & li {
+      text-align: center;
+    }
+  }
+
+  /* Main styling */
+  .banner-image {
+    height: 50vh;
+
+    & .banner-slogan h3 {
+      font-size: 30px;
+    }
+  }
+
+  .our-specials-divider h2 {
+    font-size: 30px;
+  }
+
+  .specials-grid {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+
+    & .grid-item {
+      margin-bottom: 50px;
+    }
+  }
+
+  /* Footer styling */
+  footer {
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+
+    & .social-icons ul {
+      padding: 0;
+    }
+  }
+}

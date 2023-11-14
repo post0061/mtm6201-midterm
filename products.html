@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Play&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&family=Play&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body itemscope itemtype="http://schema.org/Product">
+    <!-- skip links -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- header elements -->
+    <header role="banner">
+      <div class="header-search">
+        <!-- logo -->
+        <div class="logo-img">
+          <a href="index.html"
+            ><img src="images/alma logo copy_purple.svg" alt="purple logo"
+          /></a>
+        </div>
+        <!-- slogan -->
+        <div class="slogan">
+          <h1>Alma - baking with love</h1>
+        </div>
+        <!-- search bar -->
+        <div class="search-bar">
+          <input type="text" placeholder="Search" aria-label="search input" />
+          <button aria-label="search button">
+            <span class="material-symbols-outlined"> search </span>
+          </button>
+        </div>
+      </div>
+      <!-- navbar -->
+      <div class="nav-wrapper">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main role="main" id="main-content">
+      <!-- page banner -->
+      <div class="banner-image">
+        <img
+          src="images/products-banner.jpg"
+          srcset="
+            images/products-banner-600.jpg   600w,
+            images/products-banner-1200.jpg 1200w
+          "
+          sizes="(max-width: 600px) 600px, 1200px"
+          alt="products banner"
+        />
+        <div class="banner-slogan">
+          <h3>Products</h3>
+        </div>
+      </div>
+      <!-- products grid -->
+      <div class="product-list-wrapper">
+        <div class="product-card">
+          <img
+            itemprop="image"
+            src="/images/product-card-1.jpg"
+            srcset="
+              images/product-card-1-600.jpg   600w,
+              images/product-card-1-1200.jpg 1200w
+            "
+            sizes="(max-width: 600px) 600px, 1200px"
+            alt="product card 1"
+          />
+          <div class="product-card-content">
+            <h3 itemprop="name">Product 1</h3>
+            <p itemprop="description">A delicious treat from Alma Bakery</p>
+            <div
+              itemprop="offers"
+              itemscope
+              itemtype="http://schema.org/Offer"
+            ></div>
+            <p itemprop="price" class="price">$19.99</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/images/product-card-2.jpg"
+            srcset="
+              images/product-card-2-600.jpg   600w,
+              images/product-card-2-1200.jpg 1200w
+            "
+            sizes="(max-width: 600px) 600px, 1200px"
+            alt="product card 2"
+          />
+          <div class="product-card-content">
+            <h3 itemprop="name">Product 2</h3>
+            <p itemprop="description">A delicious treat from Alma Bakery</p>
+            <div
+              itemprop="offers"
+              itemscope
+              itemtype="http://schema.org/Offer"
+            ></div>
+            <p itemprop="price" class="price">$19.99</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/images/product-card-3.jpg"
+            srcset="
+              images/product-card-3-600.jpg   600w,
+              images/product-card-3-1200.jpg 1200w
+            "
+            sizes="(max-width: 600px) 600px, 1200px"
+            alt="product card 3"
+          />
+          <div class="product-card-content">
+            <h3 itemprop="name">Product 3</h3>
+            <p itemprop="description">A delicious treat from Alma Bakery</p>
+            <div
+              itemprop="offers"
+              itemscope
+              itemtype="http://schema.org/Offer"
+            ></div>
+            <p itemprop="price" class="price">$19.99</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/images/product-card-4.jpg"
+            srcset="
+              images/product-card-4-600.jpg   600w,
+              images/product-card-4-1200.jpg 1200w
+            "
+            sizes="(max-width: 600px) 600px, 1200px"
+            alt="product card 4"
+          />
+          <div class="product-card-content">
+            <h3 itemprop="name">Product 4</h3>
+            <p itemprop="description">A delicious treat from Alma Bakery</p>
+            <div
+              itemprop="offers"
+              itemscope
+              itemtype="http://schema.org/Offer"
+            ></div>
+            <p itemprop="price" class="price">$19.99</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/images/product-card-5.jpg"
+            srcset="
+              images/product-card-5-600.jpg   600w,
+              images/product-card-5-1200.jpg 1200w
+            "
+            sizes="(max-width: 600px) 600px, 1200px"
+            alt="product card 5"
+          />
+          <div class="product-card-content">
+            <h3 itemprop="name">Product 5</h3>
+            <p itemprop="description">A delicious treat from Alma Bakery</p>
+            <div
+              itemprop="offers"
+              itemscope
+              itemtype="http://schema.org/Offer"
+            ></div>
+            <p itemprop="price" class="price">$19.99</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/images/product-card-6.jpg"
+            srcset="
+              images/product-card-6-600.jpg   600w,
+              images/product-card-6-1200.jpg 1200w
+            "
+            sizes="(max-width: 600px) 600px, 1200px"
+            alt="product card 6"
+          />
+          <div class="product-card-content">
+            <h3 itemprop="name">Product 6</h3>
+            <p itemprop="description">A delicious treat from Alma Bakery</p>
+            <div
+              itemprop="offers"
+              itemscope
+              itemtype="http://schema.org/Offer"
+            ></div>
+            <p itemprop="price" class="price">$19.99</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/images/product-card-7.jpg"
+            srcset="
+              images/product-card-7-600.jpg   600w,
+              images/product-card-7-1200.jpg 1200w
+            "
+            sizes="(max-width: 600px) 600px, 1200px"
+            alt="product card 7"
+          />
+          <div class="product-card-content">
+            <h3 itemprop="name">Product 7</h3>
+            <p itemprop="description">A delicious treat from Alma Bakery</p>
+            <div
+              itemprop="offers"
+              itemscope
+              itemtype="http://schema.org/Offer"
+            ></div>
+            <p itemprop="price" class="price">$19.99</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/images/product-card-8.jpg"
+            srcset="
+              images/product-card-8-600.jpg   600w,
+              images/product-card-8-1200.jpg 1200w
+            "
+            sizes="(max-width: 600px) 600px, 1200px"
+            alt="product card 8"
+          />
+          <div class="product-card-content">
+            <h3 itemprop="name">Product 8</h3>
+            <p itemprop="description">A delicious treat from Alma Bakery</p>
+            <div
+              itemprop="offers"
+              itemscope
+              itemtype="http://schema.org/Offer"
+            ></div>
+            <p itemprop="price" class="price">$19.99</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/images/product-card-9.jpg"
+            srcset="
+              images/product-card-9-600.jpg   600w,
+              images/product-card-9-1200.jpg 1200w
+            "
+            sizes="(max-width: 600px) 600px, 1200px"
+            alt="product card 9"
+          />
+          <div class="product-card-content">
+            <h3 itemprop="name">Product 9</h3>
+            <p itemprop="description">A delicious treat from Alma Bakery</p>
+            <div
+              itemprop="offers"
+              itemscope
+              itemtype="http://schema.org/Offer"
+            ></div>
+            <p itemprop="price" class="price">$19.99</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/images/product-card-10.jpg"
+            srcset="
+              images/product-card-10-600.jpg   600w,
+              images/product-card-10-1200.jpg 1200w
+            "
+            sizes="(max-width: 600px) 600px, 1200px"
+            alt="product card 10"
+          />
+          <div class="product-card-content">
+            <h3 itemprop="name">Product 10</h3>
+            <p itemprop="description">A delicious treat from Alma Bakery</p>
+            <div
+              itemprop="offers"
+              itemscope
+              itemtype="http://schema.org/Offer"
+            ></div>
+            <p itemprop="price" class="price">$19.99</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer elements -->
+    <footer role="contentinfo">
+      <div class="logo-img">
+        <img src="images/alma logo green.svg" alt="green logo" />
+      </div>
+      <div class="business-hours">
+        <h3>Business Hours</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Monday - Friday</th>
+              <td>9am - 6pm</td>
+            </tr>
+            <tr>
+              <th>Saturday - Sunday</th>
+              <td>Closed</td>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <!-- social icons -->
+      <div class="social-icons">
+        <ul>
+          <li>
+            <a href="https://facebook.com" target="_blank">
+              <img src="images/facebook.svg" alt="facebook logo" />
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank">
+              <img src="images/instagram.svg" alt="instagram logo" />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank">
+              <img src="images/twitter.svg" alt="twitter logo" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- newlstetter subscription -->
+      <div class="newsletter-subscription">
+        <span class="material-symbols-outlined"> mail </span>
+        <input
+          type="text"
+          id="subscribe"
+          name="subscribe"
+          placeholder="Subscribe to our newsletter"
+        />
+        <button type="submit" aria-label="subscribe button">Subscribe</button>
+      </div>
+    </footer>
+  </body>
+</html>

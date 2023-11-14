@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #3a243b;
+  --secondary-color: #51b848;
+  --tertiary-color: #fff7e2;
+  --quaternary-color: white;
+  --primary-font: "Great Vibes", cursive;
+  --secondary-font: "Montserrat", sans-serif;
+}
+
+/* Desktop */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  padding: 20px 60px;
+
+  /* contact form styling */
+  & .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & .input-field {
+      font-family: var(--secondary-font);
+      font-weight: bold;
+      font-size: 20px;
+
+      & label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      & input,
+      textarea {
+        width: 100%;
+        padding: 15px;
+      }
+
+      & textarea {
+        height: 230px;
+        /* remove the resize option to respect the design */
+        resize: none;
+      }
+    }
+
+    /* align only the button to the end of the row */
+    & .submit-button {
+      align-self: flex-end;
+
+      & button {
+        display: flex;
+        gap: 5px;
+        background: transparent;
+        padding: 5px;
+        border: 1px solid black;
+        font-family: var(--secondary-font);
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+  }
+
+  & .address {
+    & h3,
+    p {
+      font-family: var(--secondary-font);
+      font-size: 25px;
+      margin-top: 0;
+    }
+
+    & p {
+      font-size: 20px;
+    }
+  }
+}
+
+
+/* Mobile styling */
+@media only screen and (max-width: 600px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    padding: 30px;
+  }
+}
